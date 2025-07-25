@@ -16,7 +16,6 @@ Each script generates random problem data, formulates the optimisation problem, 
 - **Self-contained examples:** Each script is ready to run and generates its own random data for reproducibility.
 - **CVX-based modeling:** All problems are formulated and solved using the CVX package for convex optimisation.
 - **KKT conditions:** Scripts for quadratic programming and water-filling display Karush-Kuhn-Tucker (KKT) conditions for deeper insight.
-- **Parameter tuning:** Key problem parameters (e.g., norm order, problem size, power budget) are easily adjustable at the top of each script.
 - **Visualisation:** The water-filling script includes bar plots for power allocation and channel characteristics.
 
 ## Dependencies
@@ -24,7 +23,6 @@ Each script generates random problem data, formulates the optimisation problem, 
 - **MATLAB** (R2016b or later recommended)
 - **CVX** (Download from [cvxr.com/cvx](http://cvxr.com/cvx/))
   - Install and set up CVX by following the instructions on the CVX website.
-- No other toolboxes are required.
 
 ## Run and Build
 
@@ -41,13 +39,9 @@ Each script generates random problem data, formulates the optimisation problem, 
      ```matlab
      run('least_squares.m')
      ```
-   - The script will display results in the MATLAB command window. The water-filling script will also generate plots.
-
-No build step is required; simply run the scripts in MATLAB.
+   - The script will display results in the MATLAB command window.
 
 ## Usage (Parameter Tuning)
-
-Each script allows you to modify key parameters at the top of the file:
 
 - **equality_constr_norm_min.m**
   - `p`: Norm order (e.g., 1, 2, or `Inf`)
@@ -62,5 +56,3 @@ Each script allows you to modify key parameters at the top of the file:
 - **water_filling_problem.m**
   - `n`: Number of users/channels
   - `pb`: Total power budget
-
-To tune parameters, simply edit the values at the top of each script and re-run the file. 
